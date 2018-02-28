@@ -59,7 +59,7 @@ int main(int argc, char** argv){
         }
         cmd.linear.x=linear_vel*vx, cmd.linear.y=linear_vel*vy, cmd.linear.z=linear_vel*vz;
         cmd.angular.x=0, cmd.angular.y=0, cmd.angular.z=angular_vel*vr;
-        ROS_INFO("%f %f %f %f", vx, vy, vz, vr);
+        // ROS_INFO("%f %f %f %f", vx, vy, vz, vr);
         pub.publish(cmd);
         loop_rate.sleep();
     }
