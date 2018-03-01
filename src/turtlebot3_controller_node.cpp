@@ -1,3 +1,4 @@
+#include <string>
 #include <stdio.h>
 #include <fcntl.h>
 #include <sys/wait.h>
@@ -20,8 +21,14 @@ int main(int argc, char** argv){
     double angular_vel=1;
     int key=0;
     ros::Rate loop_rate(10);
-
+    printf("\nControl Your Turtlebot3!\n");
+    printf("---------------------------\n");
+    printf("Moving around:\n");
+    printf("    q    w    e\n");
+    printf("    a    s    d\n");
+    printf("    z    x    c\n\n");
     while(true){
+        printf("\rESC to quit");
         if(kbhit()){
             key=getch();
         }else{
